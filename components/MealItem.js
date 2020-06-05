@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, ImageBackground } from 'react-native';
+import { withOrientation } from 'react-navigation';
 
 const MealItem = ({
     item, mealClickHandler
@@ -29,8 +30,10 @@ const styles = StyleSheet.create({
         height: 200,
         width: '100%',
         backgroundColor: '#c5c5c5',
-        marginBottom: 3
+        marginVertical: 5,
         // borderRadius: 10,
+        shadowColor: 'white',
+        shadowRadius: 5,
         // overflow:'hidden'
     },
     mealRow: {
@@ -48,7 +51,7 @@ const styles = StyleSheet.create({
     bgImg:{
         width: '100%',
         height: '100%',
-        // justifyContent: 'flex-end'
+        justifyContent: 'flex-end'
     },
     title:{
         fontFamily: 'font-ei',
