@@ -1,11 +1,9 @@
 import React from 'react';
-import { View, StyleSheet, Text, Button, Alert } from 'react-native';
+import { ScrollView, View, StyleSheet, Text, Button, Alert } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
 import {MEALS} from '../data/test-data';
 import HeaderButton from '../components/HeaderButton';
-
-
 
 const MealDetailsScreen = ({
     navigation

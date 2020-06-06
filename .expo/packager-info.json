@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 928,
+  "expoServerNgrokUrl": "https://2h-d7u.anonymous.meal-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.2h-d7u.anonymous.meal-app.exp.direct",
+  "ngrokPid": 950,
   "webpackServerPort": null
 }

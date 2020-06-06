@@ -10,7 +10,8 @@ import {
 
 import { CATEGORIES } from '../data/test-data';
 import CategoryGridItemCard from '../components/CategoryGridItemCard';
-
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import HeaderButton from '../components/HeaderButton';
 
 const CategoriesScreen = ({
     navigation
@@ -22,13 +23,18 @@ const CategoriesScreen = ({
     )
 };
 
-CategoriesScreen.navigationOptions = {
-    headerTitle: 'Meal Categories',
+CategoriesScreen.navigationOptions = ({navigation}) =>{
+    return {headerTitle: 'Meal Categories',
+    headerLeft: ()=><HeaderButtons HeaderButtonComponent= {HeaderButton}>
+        <Item title="menu" iconName='ios-menu' onPress = {()=>{
+            navigation.toggleDrawer();
+        }} />
+    </HeaderButtons>
     // headerStyle: {
     //     backgroundColor: Platform.OS === 'android' ? Colors.primary : ''
     // },
     // headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primary
-};
+}};
 
 const styles = StyleSheet.create({
     screen: {

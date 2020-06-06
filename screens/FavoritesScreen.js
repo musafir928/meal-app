@@ -3,6 +3,9 @@ import React from 'react';
 import MealList from '../components/MealList';
 import {MEALS} from '../data/test-data';
 
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import HeaderButton from '../components/HeaderButton';
+
 const FavoritesScreen = ({
     navigation
 }) => {
@@ -11,8 +14,15 @@ const FavoritesScreen = ({
     <MealList listData={favMeals} navigation={navigation}/>
 )};
 
-FavoritesScreen.navigationOptions = {
-    headerTitle: 'مېنىڭ ياختۇرىدىغانلىرىم'
+FavoritesScreen.navigationOptions = ({navigation}) =>{
+    return {
+        headerTitle: 'مېنىڭ ياختۇرىدىغانلىرىم',
+        headerLeft: ()=><HeaderButtons HeaderButtonComponent= {HeaderButton}>
+            <Item title="menu" iconName='ios-menu' onPress = {()=>{
+                navigation.toggleDrawer();
+            }} />
+        </HeaderButtons>
+    }
 }
 
 export default FavoritesScreen;
